@@ -5,7 +5,7 @@
 
 
 # Required Steps for a Passing Submission:
-1. Extract features and train an SVM model on new objects (see `pick_list_*.yaml` in `/pr2_robot/config/` for the list of models you'll be trying to identify). 
+1. Extract features and train an SVM model on new objects (see `pick_list_*.yaml` in `/pr2_robot/config/` for the list of models you'll be trying to identify).
 2. Write a ROS node and subscribe to `/pr2/world/points` topic. This topic contains noisy point cloud data that you must work with.
 3. Use filtering and RANSAC plane fitting to isolate the objects of interest from the rest of the scene.
 4. Apply Euclidean clustering to create separate clusters for individual items.
@@ -36,22 +36,39 @@ You're reading it!
 
 ### Exercise 1, 2 and 3 pipeline implemented
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
-
+This was copy/paste from Exercise 1.
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
-
+This was copy/paste from Exercise 2.
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
-Here is an example of how to include an image in your writeup.
+I collected separate datasets for each of the worlds. For worlds 1 and 2, I collected 10K samples which took a fairly long time; I only collected 500 for world 3.
 
-![demo-1](https://user-images.githubusercontent.com/20687560/28748231-46b5b912-7467-11e7-8778-3095172b7b19.png)
+World 1
+![Confuse 1](world_1_confuse.png)
+![Confuse 1 Norm](world_1_confuse_norm.png)
+
+World 2
+![Confuse 2](world_2_confuse.png)
+![Confuse 2 Norm](world_2_confuse_norm.png)
+
+World 3
+![Confuse 3](world_3_confuse.png)
+![Confuse 3 Norm](world_3_confuse_norm.png)
 
 ### Pick and Place Setup
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-And here's another image! 
-![demo-2](https://user-images.githubusercontent.com/20687560/28748286-9f65680e-7468-11e7-83dc-f1a32380b89c.png)
+Screen grabs of the 3 worlds:
+![world1](world_1.png)
+![world2](world_2.png)
+![world3](world_3.png)
 
-Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
+Most of the code is directly out of the exercises related to the perception pipeline. There is also a bunch of ROS-related code that was taken from the 'Output Yaml files' lesson.
 
+Using a large training set was helpful, but using a histogram of normals and colour is limited in ability to differentiate objects of similar shape and color but different volume. For example sometimes glue and biscuits would be mixed up, because they have similar shape and colour except the glue is much smaller.
 
+Objects being partially obstured was another issue. World 1/2 don't have this issue but World 3 has the book in front of the glue, so I don't think the glue was ever successfully classified.
 
+The accuracy was sufficient to pass the rubric.
+
+Thanks :)
