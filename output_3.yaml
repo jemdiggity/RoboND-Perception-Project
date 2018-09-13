@@ -1,0 +1,120 @@
+object_list:
+- arm_name: left
+  object_name: sticky_notes
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.4894700050354004
+      y: 0.08169794827699661
+      z: 0.7305278182029724
+  place_pose:
+    x: 0
+    y: 0.71
+    z: 0.605
+  test_scene_num: 3
+- arm_name: left
+  object_name: sticky_notes
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.4383370876312256
+      y: 0.21637754142284393
+      z: 0.6864780187606812
+  place_pose:
+    x: 0
+    y: 0.71
+    z: 0.605
+  test_scene_num: 3
+- arm_name: right
+  object_name: snacks
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.425620973110199
+      y: -0.332698255777359
+      z: 0.7530040144920349
+  place_pose:
+    x: 0
+    y: -0.71
+    z: 0.605
+  test_scene_num: 3
+- arm_name: right
+  object_name: biscuits
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.5882647037506104
+      y: -0.21833953261375427
+      z: 0.7057614922523499
+  place_pose:
+    x: 0
+    y: -0.71
+    z: 0.605
+  test_scene_num: 3
+- arm_name: left
+  object_name: eraser
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.60170578956604
+      y: 0.2828609049320221
+      z: 0.645951509475708
+  place_pose:
+    x: 0
+    y: 0.71
+    z: 0.605
+  test_scene_num: 3
+- arm_name: right
+  object_name: soap2
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.4534977376461029
+      y: -0.04472901299595833
+      z: 0.6782792210578918
+  place_pose:
+    x: 0
+    y: -0.71
+    z: 0.605
+  test_scene_num: 3
+- arm_name: right
+  object_name: soap
+  pick_pose:
+    orientation:
+      w: 0.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+    position:
+      x: 0.6756979823112488
+      y: 0.005452022422105074
+      z: 0.6756919026374817
+  place_pose:
+    x: 0
+    y: -0.71
+    z: 0.605
+  test_scene_num: 3
